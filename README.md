@@ -5,9 +5,9 @@
 
 [![npm download][download-image]][download-url]
 [![NPM version](https://badge.fury.io/js/ali-green-sdk-typescript-sdk.png)](http://badge.fury.io/js/ali-green-sdk-typescript-sdk)
-[![Build Status](https://travis-ci.com/Jeff-Tian/ali-green-sdk-typescript-sdk.svg?branch=master)](https://travis-ci.com/Jeff-Tian/ali-green-sdk-typescript-sdk)
+[![Build Status](https://travis-ci.com/Jeff-Tian/ali-green-typescript-sdk.svg?branch=master)](https://travis-ci.com/Jeff-Tian/ali-green-typescript-sdk)
 [![Dependencies Status](https://david-dm.org/Jeff-Tian/ali-green-sdk-typescript-sdk.png)](https://david-dm.org/jeff-tian/ali-green-sdk-typescript-sdk)
-[![Coverage Status](https://coveralls.io/repos/github/Jeff-Tian/ali-green-sdk-typescript-sdk/badge.svg?branch=master)](https://coveralls.io/github/Jeff-Tian/ali-green-sdk-typescript-sdk?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/Jeff-Tian/ali-green-typescript-sdk/badge.svg?branch=master)](https://coveralls.io/github/Jeff-Tian/ali-green-typescript-sdk?branch=master)
 [![code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat-square)](https://github.com/Jeff-Tian/ali-green-sdk-typescript-sdk)
 
 [download-image]: https://img.shields.io/npm/dm/ali-green-sdk-typescript-sdk.svg?style=flat-square
