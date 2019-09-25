@@ -21,7 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "@types/node": "^11.9.4",
-    "axios": "latest",
+    "axios": "^0.19.0",
     "uuid": "^3.3.2"
   },
   "devDependencies": {
@@ -43,7 +43,7 @@
     "tslint-config-prettier": "^1.17.0",
     "tslint-plugin-prettier": "^2.0.1",
     "typemoq": "latest",
-    "typescript": "^3.3.3",
+    "typescript": "3.6.3",
     "semantic-release": "^15.13.24"
   },
   "types": "lib/index.d.ts",
