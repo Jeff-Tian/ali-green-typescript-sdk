@@ -1,6 +1,6 @@
 import crypto from 'crypto'
 import uuidV1 = require('uuid/v1')
-import axios from 'axios'
+import axios, { AxiosRequestConfig } from 'axios'
 
 export default class AliGreen {
   static async textScan(texts, accessKeyId, accessKeySecret) {
@@ -62,7 +62,7 @@ export default class AliGreen {
     }
 
     AliGreen.sign(requestHeaders, bizConfig)
-    const options = {
+    const options: AxiosRequestConfig = {
       baseURL: 'https://' + hostname,
       url: path + '?clientInfo=' + encodeURIComponent(JSON.stringify(clientInfo)),
       method: 'POST',
