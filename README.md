@@ -22,6 +22,7 @@ npm install ali-green-typescript-sdk --save
 ## 功能列表
 
 - 图片鉴黄
+- 文本垃圾内容检测
 
 ```typescript
 import AliGreen from 'ali-green-typescript-sdk'
@@ -58,3 +59,8 @@ assert.deepStrictEqual(res.data.data[0].results, [
 2. `git commit`
 3. `npm version patch/minor/major`
 4. `npm publish`
+
+## 发布日志
+
+- 1.1.0 文本垃圾内容检测
+- 1.0.0 图片鉴黄

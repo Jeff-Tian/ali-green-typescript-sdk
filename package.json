@@ -1,6 +1,6 @@
 {
   "name": "ali-green-typescript-sdk",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "阿里云盾内容安全服务提供的内容检测 API SDK (TypeScript 版)",
   "main": "lib/index.js",
   "directories": {

@@ -1,8 +1,27 @@
-import * as crypto from 'crypto'
+import crypto from 'crypto'
 import uuidV1 = require('uuid/v1')
 import axios from 'axios'
 
 export default class AliGreen {
+  static async textScan(texts, accessKeyId, accessKeySecret) {
+    const bizConfig = {
+      accessKeyId,
+      accessKeySecret,
+      path: '/green/text/scan',
+      clientInfo: { ip: '127.0.0.1' },
+      requestBody: JSON.stringify({
+        scenes: ['antispam'],
+        tasks: texts.map(t => ({
+          dataId: uuidV1(),
+          content: t,
+        })),
+      }),
+      hostname: 'green.cn-shanghai.aliyuncs.com',
+      greenVersion: '2017-01-12',
+    }
+
+    return AliGreen.detect(bizConfig)
+  }
   static async pornScan(imageUrls, accessKeyId, accessKeySecret) {
     const bizConfig = {
       accessKeyId,
@@ -21,7 +40,7 @@ export default class AliGreen {
       greenVersion: '2017-01-12',
     }
 
-    return await AliGreen.detect(bizConfig)
+    return AliGreen.detect(bizConfig)
   }
   static async detect(bizConfig) {
     const { path, clientInfo, requestBody, greenVersion, hostname } = bizConfig
@@ -50,9 +69,8 @@ export default class AliGreen {
       headers: requestHeaders,
       data: bizConfig.requestBody,
     }
-    console.log('options = ', options)
 
-    return await axios(options)
+    return axios(options)
   }
 
   static sign(requestHeaders, bizConfig) {

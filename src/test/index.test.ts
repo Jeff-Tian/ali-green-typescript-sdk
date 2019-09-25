@@ -49,3 +49,57 @@ describe('image scan ', () => {
     ])
   })
 })
+
+describe('text scan ', () => {
+  let mock: MockAdapter
+
+  before(() => {
+    mock = new MockAdapter(axios)
+
+    mock.onPost(/.+/).replyOnce(200, {
+      msg: 'OK',
+      code: 200,
+      data: [
+        {
+          msg: 'OK',
+          code: 200,
+          dataId: 'xxxx$rdBjUC1C-1rd9Ah',
+          results: [
+            {
+              rate: 50.0,
+              suggestion: 'review',
+              details: [
+                {
+                  hintWords: [
+                    {
+                      context: '奥巴马',
+                    },
+                  ],
+                  contexts: [
+                    {
+                      libCode: '123456',
+                      libName: '您自定义的词库名称',
+                      context: '特朗普',
+                    },
+                  ],
+                  label: 'politics',
+                },
+              ],
+              label: 'politics',
+              scene: 'antispam',
+            },
+          ],
+          content: '奥巴马特朗普昨日在白宫进行了会面',
+          filteredContent: '***特朗普昨日在白宫进行了会面',
+          taskId: 'xxxxxxyyyyyy-xxxx',
+        },
+      ],
+      requestId: 'yyyyyyyy-862F-4BAE-8B4E-xxxxxxx',
+    })
+  })
+  it('调用接口', async () => {
+    const res = await AliGreen.textScan(['奥巴马特朗普昨日在白宫进行了会面'], 'yourAccessKeyId', 'yourAccessKeySecret')
+
+    assert.deepStrictEqual(res.data.data[0].results[0].label, 'politics')
+  })
+})
