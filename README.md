@@ -21,8 +21,8 @@ npm install ali-green-typescript-sdk --save
 
 ## 功能列表
 
-- 图片鉴黄
-- 文本垃圾内容检测
+- 图片鉴黄 `AliGreen.pornScan(['url1', 'url2', key, secret])`
+- 文本垃圾内容检测 `AliGreen.textScan(['text1', 'text2', key, secret])`
 
 ```typescript
 import AliGreen from 'ali-green-typescript-sdk'
