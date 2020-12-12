@@ -44,7 +44,7 @@
     "tslint-plugin-prettier": "^2.0.1",
     "typemoq": "latest",
     "typescript": "3.6.3",
-    "semantic-release": "^15.13.24"
+    "semantic-release": "^17.2.3"
   },
   "types": "lib/index.d.ts",
   "nyc": {
